@@ -1,6 +1,55 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+// ==================================================================================
+// 🎨 PERSONAL CONFIGURATION
+// Customize your portfolio by editing the data below.
+// ==================================================================================
+
+const CONFIG = {
+  // Profile Information
+  name: "Ben",
+  role: "Creative Developer & UI Enthusiast",
+  about: "I specialize in building high-quality, modern web applications. My focus is on creating smooth, interactive experiences that leave a lasting impression. I love exploring new technologies like Three.js and Framer Motion.",
+  
+  // Tech Stack (Add or Remove skills)
+  skills: ['React', 'TypeScript', 'Tailwind', 'Node.js', 'Git', 'Framer Motion'],
+
+  // Featured Projects
+  projects: [
+    { 
+      title: "Glass Portfolio", 
+      desc: "A modern portfolio site with glassmorphism effects and animations.", 
+      tag: "Design" 
+    },
+    { 
+      title: "E-Commerce Dashboard", 
+      desc: "Real-time analytics dashboard for online stores.", 
+      tag: "Fullstack" 
+    },
+    { 
+      title: "Task Master", 
+      desc: "Collaborative task management app with live updates.", 
+      tag: "Productivity" 
+    }
+  ],
+
+  // Social Links
+  socials: [
+    { name: "GitHub", url: "#" },
+    { name: "LinkedIn", url: "#" },
+    { name: "Twitter", url: "#" }
+  ],
+  
+  // Footer Year
+  year: 2026
+};
+
+// ==================================================================================
+// 🚀 MAIN COMPONENT
+// You generally don't need to touch this unless you want to change the layout.
+// ==================================================================================
+
 const App = () => {
   return (
     <div className="min-h-screen w-full flex items-center justify-center relative overflow-hidden bg-gray-900 selection:bg-pink-500 selection:text-white">
@@ -24,16 +73,17 @@ const App = () => {
           <header className="flex flex-col md:flex-row justify-between items-start md:items-center mb-12 gap-6">
              <div>
                <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-300 drop-shadow-sm">
-                 Ben
+                 {CONFIG.name}
                </h1>
                <p className="mt-2 text-xl text-gray-300 font-light tracking-wide">
-                 Creative Developer & UI Enthusiast
+                 {CONFIG.role}
                </p>
              </div>
              <motion.button 
                whileHover={{ scale: 1.05 }}
                whileTap={{ scale: 0.95 }}
                className="px-6 py-2 rounded-full bg-white/10 hover:bg-white/20 border border-white/10 transition backdrop-blur-md text-sm font-medium"
+               onClick={() => window.location.href = `mailto:contact@${CONFIG.name.toLowerCase()}.com`}
              >
                Contact Me
              </motion.button>
@@ -44,15 +94,13 @@ const App = () => {
             <section className="md:col-span-1 space-y-4">
               <h2 className="text-2xl font-semibold text-pink-200">About</h2>
               <p className="text-gray-300 leading-relaxed text-sm">
-                I specialize in building high-quality, modern web applications. 
-                My focus is on creating smooth, interactive experiences that leave a lasting impression.
-                I love exploring new technologies like Three.js and Framer Motion.
+                {CONFIG.about}
               </p>
               
               <div className="pt-4">
                  <h3 className="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-3">Tech Stack</h3>
                  <div className="flex flex-wrap gap-2">
-                    {['React', 'TypeScript', 'Tailwind', 'Node.js', 'Git'].map(tech => (
+                    {CONFIG.skills.map(tech => (
                       <span key={tech} className="px-3 py-1 bg-white/5 rounded-full text-xs text-gray-300 border border-white/5">
                         {tech}
                       </span>
@@ -65,11 +113,7 @@ const App = () => {
             <section className="md:col-span-2">
                <h2 className="text-2xl font-semibold text-purple-200 mb-6">Featured Projects</h2>
                <div className="grid gap-4">
-                  {[
-                    { title: "Glass Portfolio", desc: "A modern portfolio site with glassmorphism effects.", tag: "Design" },
-                    { title: "E-Commerce Dashboard", desc: "Real-time analytics dashboard for online stores.", tag: "Fullstack" },
-                    { title: "Task Master", desc: "Collaborative task management app with live updates.", tag: "Productivity" }
-                  ].map((project, i) => (
+                  {CONFIG.projects.map((project, i) => (
                     <motion.div 
                       key={i}
                       whileHover={{ x: 10, backgroundColor: 'rgba(255,255,255,0.08)' }}
@@ -87,11 +131,13 @@ const App = () => {
           </div>
           
           <footer className="mt-16 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
-             <p>© 2026 Ben. All rights reserved.</p>
+             <p>© {CONFIG.year} {CONFIG.name}. All rights reserved.</p>
              <div className="flex gap-6 mt-4 md:mt-0">
-                <a href="#" className="hover:text-white transition-colors">GitHub</a>
-                <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-                <a href="#" className="hover:text-white transition-colors">Twitter</a>
+                {CONFIG.socials.map((link) => (
+                  <a key={link.name} href={link.url} className="hover:text-white transition-colors">
+                    {link.name}
+                  </a>
+                ))}
              </div>
           </footer>
        </motion.div>
