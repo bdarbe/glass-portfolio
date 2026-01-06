@@ -11,13 +11,13 @@
   [![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=flat&logo=vite&logoColor=white)](https://vitejs.dev/)
   [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 
-  [Demo](#) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [Contributing](#contributing)
+  [Demo](https://bdarbe.github.io/glass-portfolio/) • [Features](#features) • [Installation](#installation) • [Usage](#usage) • [Contributing](#contributing)
 
 </div>
 
 ---
 
-## 🔮 Overview
+## <a id="overview"></a>🔮 Overview
 
 **Glass Portfolio** is a high-performance, visually stunning portfolio template built with React, Vite, and Tailwind CSS. It features a "Glassmorphism" design aesthetic with real-time, fluid background animations and frosted glass cards.
 
@@ -28,7 +28,7 @@ It is designed to be **dropped into any existing project** or used as a standalo
   <img src="https://placehold.co/800x400/1e1e2e/FFF?text=Application+Screenshot+Placeholder" alt="Demo Screenshot" style="border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" />
 </div>
 
-## ✨ Features
+## <a id="features"></a>✨ Features
 
 - **🎨 Glassmorphism UI:** Premium frosted glass effects using backdrop-blur.
 - **🚀 Blazing Fast:** Powered by Vite for instant server start.
@@ -36,13 +36,13 @@ It is designed to be **dropped into any existing project** or used as a standalo
 - **📱 Fully Responsive:** Looks perfect on mobile, tablet, and desktop.
 - **🛠 TypeScript Ready:** Built with modern standards in mind.
 
-## 📦 Installation
+## <a id="installation"></a>📦 Installation
 
 To get started with this project locally, follow these steps:
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/glass-portfolio.git
+git clone https://github.com/bdarbe/glass-portfolio.git
 
 # Navigate into the directory
 cd glass-portfolio
@@ -54,7 +54,7 @@ npm install
 npm run dev
 ```
 
-## 🚀 Usage
+## <a id="usage"></a>🚀 Usage
 
 ### Customizing the Content
 
@@ -78,7 +78,7 @@ animation: {
 }
 ```
 
-## 🤝 Contributing
+## <a id="contributing"></a>🤝 Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -88,12 +88,12 @@ Contributions are what make the open source community such an amazing place to l
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
+## <a id="license"></a>📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
 <div align="center">
-  <p>Built with ❤️ by <a href="https://github.com/YOUR_USERNAME">Your Name</a></p>
+  <p>Built with ❤️ by <a href="https://github.com/bdarbe">bdarbe</a></p>
 </div>
