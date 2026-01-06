@@ -54,17 +54,24 @@ npm install
 npm run dev
 ```
 
-## <a id="usage"></a>🚀 Usage
+## 🚀 Usage
 
-### Customizing the Content
+### 🎨 How to Customize
 
-Open `src/App.jsx` to modify the personal information, projects, and social links.
+This template is designed to be extremely easy to personalize. You don't need to dig through complex code—everything you need is at the top of a single file.
 
-```jsx
-// src/App.jsx
+1. Open `src/App.jsx`
+2. Locate the `CONFIG` object at the top of the file.
+3. Simply edit the text values to match your name, role, and projects!
 
-<h1 className="...">Your Name</h1>
-<p className="...">Your Tagline</p>
+```javascript
+const CONFIG = {
+  name: "Your Name",
+  role: "Your Professional Role",
+  about: "A brief bio about yourself...",
+  skills: ['React', 'Tailwind', ...],
+  // ... and so on
+};
 ```
 
 ### Adjusting the Theme
